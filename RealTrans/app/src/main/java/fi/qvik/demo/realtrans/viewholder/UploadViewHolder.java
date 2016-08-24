@@ -17,16 +17,24 @@ import fi.qvik.demo.realtrans.models.Upload;
 public class UploadViewHolder extends RecyclerView.ViewHolder {
     public TextView nicknameView;
     public ImageView thumbView;
+    public ImageView starView;
+    public TextView numStarsView;
 
     public UploadViewHolder(View itemView) {
         super(itemView);
 
         nicknameView = (TextView) itemView.findViewById(R.id.nickname);
         thumbView = (ImageView) itemView.findViewById(R.id.image);
+        starView = (ImageView) itemView.findViewById(R.id.star);
+        numStarsView = (TextView) itemView.findViewById(R.id.post_num_stars);
     }
 
-    public void bindToUpload(Context context, Upload upload) {
+    public void bindToUpload(Context context, Upload upload, View.OnClickListener starClickListener) {
         nicknameView.setText(upload.nickname);
+        numStarsView.setText(String.valueOf(upload.starCount));
+
         Picasso.with(context).load(upload.dUrl).into(thumbView);
+
+        starView.setOnClickListener(starClickListener);
     }
 }

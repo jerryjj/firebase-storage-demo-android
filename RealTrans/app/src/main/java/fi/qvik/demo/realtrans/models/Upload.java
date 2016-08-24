@@ -16,6 +16,8 @@ public class Upload {
     public String uid;
     public String nickname;
     public Long createdAt;
+    public int starCount = 0;
+    public Map<String, Boolean> stars = new HashMap<>();
 
     public Upload() {
         // Default constructor required for calls to DataSnapshot.getValue(Upload.class)
@@ -43,6 +45,8 @@ public class Upload {
         result.put("nickname", nickname);
         result.put("dUrl", dUrl);
         result.put("createdAt", ServerValue.TIMESTAMP);
+        result.put("starCount", starCount);
+        result.put("stars", stars);
 
         return result;
     }

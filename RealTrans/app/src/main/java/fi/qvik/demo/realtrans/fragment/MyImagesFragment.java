@@ -14,7 +14,8 @@ public class MyImagesFragment extends ImageListFragment {
         // [START my_images_query]
         // My top images
         String myUserId = getUid();
-        Query myTopPostsQuery = databaseReference.child("user-uploads").child(myUserId);
+        Query myTopPostsQuery = databaseReference.child("user-uploads").child(myUserId)
+                .orderByChild("starCount");
         // [END my_images_query]
 
         return myTopPostsQuery;

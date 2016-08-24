@@ -7,4 +7,5 @@
     <string name="nickname_hint">Insert nickname</string>
     <string name="sign_in_anonymously">Sign In</string>
     <string name="log_out">Log out</string>
+    <string name="rationale_storage">We just need to store the photo temporarily</string>
 </resources>
