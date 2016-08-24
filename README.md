@@ -30,13 +30,17 @@ Download the Android config file (google-services.json) from the console and put
       ".write": "auth != null",
       "$id": {
         ".validate": "newData.hasChildren(['dUrl', 'nickname', 'uid', 'createdAt'])",
-        ".indexOn": ["createdAt"]
+        ".indexOn": ["createdAt", "starCount"]
       }
     },
     "user-uploads": {
       "$uid": {
-        ".read": "$uid === auth.uid",
-        ".write": "$uid === auth.uid"
+        ".read": "auth != null",
+        ".write": "$uid === auth.uid",
+        "$upload_id": {
+          // This is not the best way to do this, but didn't find better one yet
+          ".write": "auth != null && (data.exists() || $uid === auth.uid)"
+        }
       }
     },
     "users": {
