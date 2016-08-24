@@ -3,6 +3,11 @@
 Firebase Storage Demo application presented in Helsinki Android meetup.
 I'm not a full-time Android developer, so please forgive me about the demo code quality :)
 
+## Demo App
+
+You can download the APK for the demo app from here: https://github.com/jerryjj/firebase-storage-demo-android/raw/master/debug-release/app-debug.apk
+The source code is available under the RealTrans-folder.
+
 ## Firebase console configurations
 
 ### Authentication
