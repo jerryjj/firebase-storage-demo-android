@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">RealTrans</string>
-
     <string name="heading_recent">Recent</string>
     <string name="heading_my_images">My Images</string>
 
-    <string name="camera_button_text">Take Photo and Upload</string>
-    <string name="take_photo_prompt">Upload a new photo</string>
-    <string name="sign_in_prompt">Sign In to begin</string>
+    <string name="sign_in_prompt">Select a nickname to begin</string>
     <string name="nickname_hint">Insert nickname</string>
     <string name="sign_in_anonymously">Sign In</string>
     <string name="log_out">Log out</string>
-    <string name="rationale_storage">This demo reads images from your camera to demonstrate uploading.</string>
 </resources>
