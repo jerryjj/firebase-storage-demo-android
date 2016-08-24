@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/status_sign_in"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_1"
+        android:text="@string/sign_in_prompt" />
+
+    <EditText
+        android:id="@+id/ti_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nickname_hint" />
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="@dimen/standard_field_width"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_anonymously" />
+
+</LinearLayout>
