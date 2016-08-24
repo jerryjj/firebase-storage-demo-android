@@ -319,12 +319,10 @@ public class MainActivity extends BaseActivity implements
         if (GENERATE_THUMBNAIL_FROM_FILE) {
             Bitmap thumbImage;
             try {
-                thumbImage = createThumbnailFromFileUri(fileUri, 800, 600);
+                thumbImage = createThumbnailFromFileUri(fileUri, 800, 1000);
             } catch (Exception e) {
                 return;
             }
-
-            Log.d(TAG, "Generated thumbnail " + thumbImage.getByteCount());
             uploadFromBitmap(thumbImage);
             return;
         }
@@ -412,6 +410,13 @@ public class MainActivity extends BaseActivity implements
         if (expectedWidth > reqWidth) {
             inSampleSize = Math.round((float)width / (float)reqWidth);
         }
+
+        /*
+        Log.d(TAG, "thumbnail:origWidth " + width);
+        Log.d(TAG, "thumbnail:origHeight " + height);
+        Log.d(TAG, "thumbnail:expectedWidth " + expectedWidth);
+        Log.d(TAG, "thumbnail:inSampleSize " + inSampleSize);
+        */
 
         options.inSampleSize = inSampleSize;
         // Decode bitmap with inSampleSize set
