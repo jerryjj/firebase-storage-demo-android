@@ -10,6 +10,8 @@ The source code is available under the RealTrans-folder.
 
 ## Firebase console configurations
 
+Download the Android config file (google-services.json) from the console and put it in the RealTrans/app/ -folder.
+
 ### Authentication
 
 * Enable the Anonymous Sign-In provider
