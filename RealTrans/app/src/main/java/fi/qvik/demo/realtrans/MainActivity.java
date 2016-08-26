@@ -75,7 +75,7 @@ public class MainActivity extends BaseActivity implements
 
     private User currentUserModel = null;
 
-    // Full file upload related varaibles
+    // Full file upload related variables
     private Uri mFileUri = null;
 
     @Override
