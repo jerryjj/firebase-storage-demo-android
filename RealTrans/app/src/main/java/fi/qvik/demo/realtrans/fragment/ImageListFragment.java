@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,6 +104,13 @@ public abstract class ImageListFragment extends Fragment {
                 });
             }
         };
+
+        mAdapter.setHasStableIds(true);
+
+        RecyclerView.ItemAnimator animator = mRecycler.getItemAnimator();
+        if (animator instanceof SimpleItemAnimator) {
+            ((SimpleItemAnimator) animator).setSupportsChangeAnimations(false);
+        }
 
         // Scroll to top on new uploads
         mAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
